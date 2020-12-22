@@ -1,19 +1,24 @@
 from tkinter import *
-from tkinter import messagebox
 
-from fractalDesign import fractalDesign
+import turtle
 
-def drawFractal():
-    fd = fractalDesign("Snowflake")
-    fd.draw()
+from fractalDesignHandler import fractalDesignHandler
+
+def drawFractal(fractal):
+    #print(fractal)
+    fd = fractalDesignHandler(fractal)
+    fd.draw(turtle)
  
 fractalWindow = Tk()
 fractalWindow.title("Fractal Designer")
 fractalWindow.geometry('325x250')
 fractalWindow.configure(background = "gray")
 
-F1 = Button(fractalWindow, text = "Fractal1", command = drawFractal)
-F1.place(x = 35,y = 50)
+SnowflakeButton = Button(fractalWindow, text = "Snowflake", command = lambda: drawFractal("Snowflake"))
+TreeButton = Button(fractalWindow, text = "Tree", command = lambda: drawFractal("Tree"))
+
+SnowflakeButton.place(x = 35,y = 30)
+TreeButton.place(x = 35, y = 60)
 
 fractalWindow.mainloop()
 
