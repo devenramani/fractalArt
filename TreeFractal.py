@@ -24,9 +24,10 @@ class Tree(fractalDesign):
                 t.backward(branch_length)
 
         t = turtle.Turtle()
-        t.hideturtle()
-        t.setheading(90)
+        t.goto((-200, -200)) 
+        t.speed(200)
         t.color('green')
-
+        t.setheading(90)
+        
         build_tree(t, 50, 5, 30)
         turtle.mainloop()

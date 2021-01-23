@@ -22,7 +22,10 @@ class Snowflake(fractalDesign):
                 koch_curve(t, iterations, length, shortening_factor, angle)
         
         t = turtle.Turtle()
-        t.hideturtle()
+        t.goto((120, -120)) 
+        t.speed(60)
+        t.color('blue')
+
         for i in range(3):
             koch_curve(t, 3, 200, 3, 60)
             t.right(120)

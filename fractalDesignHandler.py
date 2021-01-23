@@ -1,5 +1,7 @@
-from Snowflake import Snowflake
-from Tree import Tree
+from SnowflakeFractal import Snowflake
+from TreeFractal import Tree
+from StarFractal import Star
+from SpiralStarFractal import SpiralStar
 
 class fractalDesignHandler:
 
@@ -17,6 +19,14 @@ class fractalDesignHandler:
             
         elif(self.fractalDesign == "Tree"):
             t = Tree()
+            t.draw(turtle)
+
+        elif(self.fractalDesign == "Star"):
+            t = Star()
+            t.draw(turtle)
+
+        elif(self.fractalDesign == "SpiralStar"):
+            t = SpiralStar()
             t.draw(turtle)
 
         else:
